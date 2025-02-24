@@ -5,284 +5,275 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>KANAAN SHOE COLLECTION</title>
     <!-- Favicon -->
     <link rel="icon" href="./images/logo.webp" type="image/webp" sizes="16x16" />
-   
 </head>
 
 <body>
-    
-    <!-- Navigation Bar -->
-    <nav id="nav">
-        <!-- Logo, Search bar -->
-        <div class="navTop">
-            <!-- <div class="navItem">
-                <img src="images/logo.webp" width="80" height="80" style="border-radius: 50%;" alt="Shoo Store Logo">
-            </div> -->
-            <div class="navItem">
+    <!-- Search Bar -->
+    <div id="searchBar" class="container-fluid py-3 d-none" style="background-color: #f8f9fa; border-bottom: 1px solid #dee2e6;">
+        <div class="container">
+            <div class="position-relative">
+                <input style="margin-left: 15px; margin-right: 15px;" type="text" class="form-control" placeholder="Search..." aria-label="Search">
+                <button class="btn position-absolute end-0 top-50 translate-middle-y border-0" type="button" id="closeSearch" style="background: none; padding-right: 10px;">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <!-- <div class="navItem">
-                <span class="limitedOffer">Limited Offer!</span>
-            </div> -->
-
         </div>
-        <div class="navBottom">
-            <h3 class="menuItem">NIKE AIRMAX</h3>
-            <h3 class="menuItem">CLARK</h3>
-            <h3 class="menuItem">BOSS SNEAKERS</h3>
-            <h3 class="menuItem">CRATER</h3>
-            <h3 class="menuItem">HIPPIE</h3>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #072D4B;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggling-icon"></span>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="brand-text" style="color: rgba(0, 0, 0, 0.5);"><img src="images/logo.webp" width="50" height="50" style="border-radius: 50%;" alt="Shoo Store Logo"><i style="margin-left: 5px;">KANAAN SHOE COLLECTION</i></span>
+            </a>
+            <a class="nav-link d-lg-none search-icon-mobile" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">All Brands</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                    <li class="nav-item search-icon d-none d-lg-block">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-search" style="color: #36abdd;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navigation Bar (Custom Nav) -->
+    <nav id="nav" class="container py-3">
+        <div class="navTop d-flex justify-content-between align-items-center">
+            <div class="navItem"></div>
+        </div>
+        <div class="navBottom d-flex justify-content-center align-items-center flex-wrap">
+            <h3 class="menuItem mx-2 my-2">NIKE AIRMAX</h3>
+            <h3 class="menuItem mx-2 my-2">CLARK</h3>
+            <h3 class="menuItem mx-2 my-2">BOSS SNEAKERS</h3>
+            <h3 class="menuItem mx-2 my-2">CRATER</h3>
+            <h3 class="menuItem mx-2 my-2">HIPPIE</h3>
         </div>
     </nav>
 
     <!-- Slider -->
-    <div class="slider">
-        <div class="sliderWrapper">
-            <div class="sliderItem">
-                <img src="./img/nike1.png" alt="Nike Air Force"  class="sliderImage" >
-                <div class="sliderBgCircle"></div>
-                <h1 class="sliderTitle">NIKE AIRMAX <br> NEW <br> SEASON</h1>
-                <h2 class="sliderPrice">3000/=</h2>
-                <a href="#product"><button class="buyButton">BUY NOW</button></a>
-
+    <div class="slider position-relative">
+        <div class="sliderWrapper d-flex">
+            <div class="sliderItem flex-column align-items-center justify-content-center position-relative w-100">
+                <img src="./img/nike1.png" alt="Nike Air Force" class="sliderImage img-fluid" data-aos="fade-up">
+                <div class="sliderBgCircle position-absolute"></div>
+                <h1 class="sliderTitle position-absolute text-white" data-aos="fade-up">NIKE AIRMAX <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice position-absolute text-white border border-light" data-aos="fade-up">3000/=</h2>
+                <a href="#product"><button class="buyButton position-absolute btn text-white border border-light" data-aos="fade-up">BUY NOW</button></a>
             </div>
-            <div class="sliderItem">
-                <img src="./images/clack1.png" alt="Nike Jordan"  class="sliderImage" >
-                <div class="sliderBgCircle"></div>
-                <h1 class="sliderTitle">CLARK <br> NEW <br> SEASON</h1>
-                <h2 class="sliderPrice">3000/=</h2>
-                <a href="#product"><button class="buyButton">BUY NOW</button></a>
-
+            <div class="sliderItem flex-column align-items-center justify-content-center position-relative w-100">
+                <img src="./images/clack1.png" alt="Nike Jordan" class="sliderImage img-fluid" data-aos="fade-up">
+                <div class="sliderBgCircle position-absolute"></div>
+                <h1 class="sliderTitle position-absolute text-white" data-aos="fade-up">CLARK <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice position-absolute text-white border border-light" data-aos="fade-up">3000/=</h2>
+                <a href="#product"><button class="buyButton position-absolute btn text-white border border-light" data-aos="fade-up">BUY NOW</button></a>
             </div>
-            <div class="sliderItem">
-                <img src="./images/sneaker.png" alt="Nike Blazer" class="sliderImage">
-                <div class="sliderBgCircle"></div>
-                <h1 class="sliderTitle">BOSS SNEAKERS <br> NEW <br> SEASON</h1>
-                <h2 class="sliderPrice">3000/=</h2>
-                <a href="#product"><button class="buyButton">BUY NOW</button></a>
-
+            <div class="sliderItem flex-column align-items-center justify-content-center position-relative w-100">
+                <img src="./images/sneaker.png" alt="Nike Blazer" class="sliderImage img-fluid" data-aos="fade-up">
+                <div class="sliderBgCircle position-absolute"></div>
+                <h1 class="sliderTitle position-absolute text-white" data-aos="fade-up">BOSS SNEAKERS <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice position-absolute text-white border border-light" data-aos="fade-up">3000/=</h2>
+                <a href="#product"><button class="buyButton position-absolute btn text-white border border-light" data-aos="fade-up">BUY NOW</button></a>
             </div>
-            <div class="sliderItem">
-                <img src="./img/crater.png" alt="Nike Crater" class="sliderImage">
-                <div class="sliderBgCircle"></div>
-                <h1 class="sliderTitle">CRATER <br> NEW <br> SEASON</h1>
-                <h2 class="sliderPrice">30000/=</h2>
-                <a href="#product"><button class="buyButton">BUY NOW</button></a>
-
+            <div class="sliderItem flex-column align-items-center justify-content-center position-relative w-100">
+                <img src="./img/crater.png" alt="Nike Crater" class="sliderImage img-fluid" data-aos="fade-up">
+                <div class="sliderBgCircle position-absolute"></div>
+                <h1 class="sliderTitle position-absolute text-white" data-aos="fade-up">CRATER <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice position-absolute text-white border border-light" data-aos="fade-up">30000/=</h2>
+                <a href="#product"><button class="buyButton position-absolute btn text-white border border-light" data-aos="fade-up">BUY NOW</button></a>
             </div>
-            <div class="sliderItem">
-                <img src="./img/hippie.png" alt="Nike Hippie" class="sliderImage">
-                <div class="sliderBgCircle"></div>
-                <h1 class="sliderTitle">HIPPIE <br> NEW <br> SEASON</h1>
-                <h2 class="sliderPrice">3000/=</h2>
-                <a href="#product"><button class="buyButton">BUY NOW</button></a>
-
+            <div class="sliderItem flex-column align-items-center justify-content-center position-relative w-100">
+                <img src="./img/hippie.png" alt="Nike Hippie" class="sliderImage img-fluid" data-aos="fade-up">
+                <div class="sliderBgCircle position-absolute"></div>
+                <h1 class="sliderTitle position-absolute text-white" data-aos="fade-up">HIPPIE <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice position-absolute text-white border border-light" data-aos="fade-up">3000/=</h2>
+                <a href="#product"><button class="buyButton position-absolute btn text-white border border-light" data-aos="fade-up">BUY NOW</button></a>
             </div>
         </div>
     </div>
 
-    <!--  Features -->
-    <div class="features">
-        <div class="feature">
-            <img src="./images/booking.png" alt="" class="featureIcon">
-            <span class="featureTitle">ONLINE BOOKING</span>
-            <span class="featureDescription">Online booking available on all orders.</span>
-        </div>
-        <div class="feature">
-            <img class="featureIcon" src="./img/return.png" alt="">
-            <span class="featureTitle">ONE WEEK RETURN</span>
-            <span class="featureDescription">No question return and easy refund in 7 days.</span>
-        </div>
-        <!-- <div class="feature">
-            <img class="featureIcon" src="./img/gift.png" alt="">
-            <span class="featureTitle">GIFT CARDS</span>
-            <span class="featureDescription">Buy gift cards and use coupon codes easily.</span>
-        </div> -->
-        <div class="feature">
-            <img class="featureIcon" src="./img/contact.png" alt="">
-            <span class="featureTitle">CONTACT US</span>
-            <span class="featureDescription">Keep in touch via email and support system.</span>
+    <!-- Features -->
+    <div class="features container py-5">
+        <div class="row justify-content-around">
+            <div class="feature col-12 col-md-4 text-center mb-4">
+                <img src="./images/booking.png" alt="" class="featureIcon mb-3" data-aos="fade-up">
+                <span class="featureTitle fw-bold" data-aos="fade-up">ONLINE BOOKING</span>
+                <span class="featureDescription text-muted" data-aos="fade-up">Online booking available on all orders.</span>
+            </div>
+            <div class="feature col-12 col-md-4 text-center mb-4">
+                <img class="featureIcon mb-3" src="./img/return.png" alt="" data-aos="fade-up">
+                <span class="featureTitle fw-bold" data-aos="fade-up">ONE WEEK RETURN</span>
+                <span class="featureDescription text-muted" data-aos="fade-up">No question return and easy refund in 7 days.</span>
+            </div>
+            <div class="feature col-12 col-md-4 text-center mb-4">
+                <img class="featureIcon mb-3" src="./img/contact.png" alt="" data-aos="fade-up">
+                <span class="featureTitle fw-bold" data-aos="fade-up">CONTACT US</span>
+                <span class="featureDescription text-muted" data-aos="fade-up">Keep in touch via email and support system.</span>
+            </div>
         </div>
     </div>
 
     <!-- Products -->
-    <div class="product" id="product">
-        <img src="./img/nike1.png" alt="" class="productImage">
-        <div class="productDetails" style="margin-bottom: 10px; padding: 10px;">
-            <h1 class="productTitle">NIKE AIRMAX</h1>
-            <h2 class="productPrice">3000/=</h2>
-            <p class="productDescription">Experience ultimate comfort and style with the NIKE AIRMAX, designed for superior performance and a sleek look.</p>
-
-            <div class="colors">
-                <div class="color"></div>
-                <div class="color"></div>
+    <div class="product position-relative" id="product">
+        <img src="./img/nike1.png" alt="" class="productImage w-100 w-md-50">
+        <div class="productDetails position-absolute top-0 end-0 w-100 w-md-50 p-5">
+            <h1 class="productTitle display-1 fw-bold">NIKE AIRMAX</h1>
+            <h2 class="productPrice fs-1">3000/=</h2>
+            <p class="productDescription fs-4 text-muted">Experience ultimate comfort and style with the NIKE AIRMAX, designed for superior performance and a sleek look.</p>
+            <div class="colors d-flex mb-3">
+                <div class="color me-2" style="width: 32px; height: 32px; border-radius: 5px; background-color: black;"></div>
+                <div class="color" style="width: 32px; height: 32px; border-radius: 5px; background-color: darkblue;"></div>
             </div>
-            <div class="sizes">
-                <div class="size">42</div>
-                <div class="size">43</div>
-                <div class="size">44</div>
+            <div class="sizes d-flex mb-3">
+                <div class="size me-2 px-3 py-2 border border-dark">42</div>
+                <div class="size me-2 px-3 py-2 border border-dark">43</div>
+                <div class="size px-3 py-2 border border-dark">44</div>
             </div>
-            <button class="productButton">Book NOW</button>
-        </div><br>
+            <button class="productButton btn btn-dark float-end px-4 py-2">Book NOW</button>
+        </div>
         <!-- Payment -->
-        <div class="payment" style="padding: 70px;">
-            <h1 class="payTitle">Personal Information</h1>
-            <label>Name & Surname</label>
-            <input type="text" class="payInput" placeholder="Janette Bennett">
-            <label>Phone</label>
-            <input type="text" class="payInput" placeholder="+1 123 4567">
-            <label>Address</label>
-            <input type="text" class="payInput" placeholder="Delta St. 23 42-167">
-            <button class="payButton">Checkout</button>
-            <span class="close" style="margin-bottom: 20px; padding-bottom:20px;">X</span>
-            <!-- <h1 class="payTitle">Card Information</h1>
-            <div class="cardIcons">
-                <img src="./img/visa.png" width="35px" alt="visa" class="cardIcon">
-                <img src="./img/master.png" width="35px" alt="mastercard" class="cardIcon">
-            </div>
-            <input type="password" class="payInput" placeholder="Card Number">
-            <div class="cardInfo">
-                <input type="text" class="payInput small" placeholder="mm">
-                <input type="text" class="payInput small" placeholder="yyyy">
-                <input type="text" class="payInput small" placeholder="cvv">
-            </div> -->
-            
+        <div class="payment position-absolute d-none flex-column" style="width: 500px; height: 450px; background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px); z-index: 9999; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; padding: 10px 50px; border-radius: 10px; box-shadow: 0 0 13px 2px rgba(0,0,0,0.3);">
+            <h1 class="payTitle fs-4 text-muted">Personal Information</h1>
+            <label class="form-label fs-6 fw-light">Name & Surname</label>
+            <input type="text" class="payInput form-control mb-2" placeholder="Janette Bennett">
+            <label class="form-label fs-6 fw-light">Phone</label>
+            <input type="text" class="payInput form-control mb-2" placeholder="+1 123 4567">
+            <label class="form-label fs-6 fw-light">Address</label>
+            <input type="text" class="payInput form-control mb-2" placeholder="Delta St. 23 42-167">
+            <button class="payButton btn btn-success w-100 mt-3">Checkout</button>
+            <span class="close position-absolute top-0 end-0 bg-dark text-white d-flex align-items-center justify-content-center cursor-pointer p-1 rounded-circle" style="width: 20px; height: 20px;">X</span>
         </div>
     </div>
 
     <!-- Gallery -->
-
-    <div class="gallery">
-        <div class="galleryItem">
-            <h1 class="galleyTitle">Experience the Best</h1>
-            <img src="./images/bb.jpg"
-                alt="" class="galleryImage">
+    <div class="gallery container py-5">
+        <div class="row justify-content-between">
+            <div class="galleryItem col-12 col-md-4 text-center mb-4">
+                <h1 class="galleryTitle fw-bold mb-3" data-aos="fade-up">Experience the Best</h1>
+                <img src="./images/bb.jpg" alt="" class="galleryImage w-100" data-aos="fade-up">
+            </div>
+            <div class="galleryItem col-12 col-md-4 text-center mb-4">
+                <h1 class="galleryTitle fw-bold mb-3" data-aos="fade-up">Just Do it</h1>
+                <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImage w-100" data-aos="fade-up">
+            </div>
+            <div class="galleryItem col-12 col-md-4 text-center mb-4">
+                <img src="./images/boss.png" alt="" class="galleryImage w-100" data-aos="fade-up">
+                <h1 class="galleryTitle fw-bold mt-3" data-aos="fade-up">Be Your Own Boss</h1>
+            </div>
         </div>
-        <div class="galleryItem">
-            <h1 class="galleryTitle">Just Do it</h1>
-            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt="" class="galleryImage">
-        </div>
-        <div class="galleryItem">
-            <img src="./images/boss.png"
-                alt="" class="galleryImage">
-            <h1 class="galleryTitle">Be Your Own Boss</h1>
-        </div>
-        
     </div>
 
     <!-- New Season -->
-
-    <div class="newSeason">
-        <div class="nsItem">
-            <img src="./images/col.jpg"
-                alt="" class="nsImage">
-        </div>
-        <div class="nsItem">
-            <h3 class="nsTitleSmall">NEW ARRIVALS</h3>
-            <h1 class="nsTitle">New Collections</h1>
-            <a href="#nav">
-                <button class="nsButton">CHOOSE YOUR STYLE</button>
-            </a>
-        </div>
-        <div class="nsItem">
-            <img src="./images/lov.jpg"
-                alt="" class="nsImage">
+    <div class="newSeason container py-5">
+        <div class="row justify-content-between">
+            <div class="nsItem col-12 col-md-4 text-center text-white bg-dark p-4">
+                <img src="./images/col.jpg" alt="" class="nsImage w-100 mb-3" data-aos="fade-up">
+            </div>
+            <div class="nsItem col-12 col-md-4 text-center text-white bg-dark p-4 d-flex flex-column justify-content-center align-items-center">
+                <h3 class="nsTitleSmall text-muted mb-2" data-aos="fade-up">NEW ARRIVALS</h3>
+                <h1 class="nsTitle display-4 fw-bold" data-aos="fade-up">New Collections</h1>
+                <a href="#nav"><button class="nsButton btn btn-success mt-3 px-4 py-2" data-aos="fade-up">CHOOSE YOUR STYLE</button></a>
+            </div>
+            <div class="nsItem col-12 col-md-4 text-center text-white bg-dark p-4">
+                <img src="./images/lov.jpg" alt="" class="nsImage w-100 mb-3" data-aos="fade-up">
+            </div>
         </div>
     </div>
 
-
-    <!-- about us -->
-    <section id="about-us" class="about-us-section text-light">
+    <!-- About Us -->
+    <section id="about-us" class="about-us-section text-light py-5" style="background-color: #072D4B; background-image: url('./images/back2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
-            <center><h2 >About Us</h2></center>
-            
+            <h2 class="text-center mb-5" data-aos="fade-up">About Us</h2>
             <div class="row align-items-center">
-                
-                <!-- Text Content -->
-                <div class="col-lg-6 col-12 about-content text-light">
-                    
-                    <p style="color: white;">KANAAN is a leading shoe company in Kenya, known for its innovative designs, comfort, and quality craftsmanship. Our mission is to provide every customer with footwear that not only elevates their style but also guarantees long-lasting comfort. With a focus on sustainability and customer satisfaction, KANAAN continues to redefine fashion in the footwear industry.</p>
+                <div class="col-12 col-lg-6 about-content text-light text-center text-lg-start" data-aos="fade-up">
+                    <p>KANAAN is a leading shoe company in Kenya, known for its innovative designs, comfort, and quality craftsmanship. Our mission is to provide every customer with footwear that not only elevates their style but also guarantees long-lasting comfort. With a focus on sustainability and customer satisfaction, KANAAN continues to redefine fashion in the footwear industry.</p>
                 </div>
-                
-                <!-- Logo -->
-                <div class="col-lg-6 col-12 text-center logo-container">
+                <div class="col-12 col-lg-6 text-center logo-container mt-4 mt-lg-0" data-aos="fade-up">
                     <img src="./images/logo.webp" alt="KANAAN Logo" class="logo">
                 </div>
             </div>
         </div>
     </section>
-   
-    
-    
-    
 
     <!-- Footer -->
-    <footer>
-        <div class="footerLeft">
-            <div class="footerMenu">
-                <h1 class="footerMenuTitle">About Us</h1>
-                <ul class="footerMenuList">
-                    <li class="footerListItem">Company</li>
-                    <li class="footerListItem">Contact</li>
-                    <li class="footerListItem">Careers</li>
-                    <li class="footerListItem">Affiliates</li>
-                    <li class="footerListItem">Stores</li>
-                </ul>
-            </div>
-            <div class="footerMenu">
-                <h1 class="footerMenuTitle">Useful Links</h1>
-                <ul class="footerMenuList">
-                    <li class="footerListItem">Support</li>
-                    <li class="footerListItem">Refund</li>
-                    <li class="footerListItem">FAQ</li>
-                    <li class="footerListItem">Feedback</li>
-                    <li class="footerListItem">Stories</li>
-                </ul>
-            </div>
-            <div class="footerMenu">
-                <h1 class="footerMenuTitle">Products</h1>
-                <ul class="footerMenuList">
-                    <li class="footerListItem">Air Force</li>
-                    <li class="footerListItem">Air Jordan</li>
-                    <li class="footerListItem">Blazer</li>
-                    <li class="footerListItem">Crater</li>
-                    <li class="footerListItem">Hippie</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footerRight">
-            <div class="footerRightMenu">
-                <h1 class="footerMenuTitle">Subscribe to our newsletter</h1>
-                <div class="footerMail">
-                    <input type="text" placeholder="your@email.com" class="footerInput">
-                    <button class="footerButton">Join</button>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="footerLeft col-12 col-md-8">
+                    <div class="row">
+                        <div class="footerMenu col-12 col-md-4 mb-4">
+                            <h1 class="footerMenuTitle fs-5">About Us</h1>
+                            <ul class="footerMenuList list-unstyled">
+                                <li class="footerListItem text-muted mb-2">Company</li>
+                                <li class="footerListItem text-muted mb-2">Contact</li>
+                                <li class="footerListItem text-muted mb-2">Careers</li>
+                                <li class="footerListItem text-muted mb-2">Affiliates</li>
+                                <li class="footerListItem text-muted mb-2">Stores</li>
+                            </ul>
+                        </div>
+                        <div class="footerMenu col-12 col-md-4 mb-4">
+                            <h1 class="footerMenuTitle fs-5">Useful Links</h1>
+                            <ul class="footerMenuList list-unstyled">
+                                <li class="footerListItem text-muted mb-2">Support</li>
+                                <li class="footerListItem text-muted mb-2">Refund</li>
+                                <li class="footerListItem text-muted mb-2">FAQ</li>
+                                <li class="footerListItem text-muted mb-2">Feedback</li>
+                                <li class="footerListItem text-muted mb-2">Stories</li>
+                            </ul>
+                        </div>
+                        <div class="footerMenu col-12 col-md-4 mb-4">
+                            <h1 class="footerMenuTitle fs-5">Products</h1>
+                            <ul class="footerMenuList list-unstyled">
+                                <li class="footerListItem text-muted mb-2">Air Force</li>
+                                <li class="footerListItem text-muted mb-2">Air Jordan</li>
+                                <li class="footerListItem text-muted mb-2">Blazer</li>
+                                <li class="footerListItem text-muted mb-2">Crater</li>
+                                <li class="footerListItem text-muted mb-2">Hippie</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="footerRightMenu">
-                <h1 class="footerMenuTitle">Follow Us</h1>
-                <div class="footerIcons">
-                    <img src="./img/facebook.png" alt="" class="footerIcon">
-                    <img src="./img/twitter.png" alt="" class="footerIcon">
-                    <img src="./img/instagram.png" alt="" class="footerIcon">
-                    <img src="./img/whatsapp.png" alt="" class="footerIcon">
+                <div class="footerRight col-12 col-md-4">
+                    <div class="footerRightMenu mb-4">
+                        <h1 class="footerMenuTitle fs-5 mb-3">Subscribe to our newsletter</h1>
+                        <div class="footerMail d-flex flex-column flex-md-row">
+                            <input type="text" placeholder="your@email.com" class="footerInput form-control me-0 me-md-2 mb-2 mb-md-0">
+                            <button class="footerButton btn btn-dark w-100 w-md-auto">Join</button>
+                        </div>
+                    </div>
+                    <div class="footerRightMenu mb-4">
+                        <h1 class="footerMenuTitle fs-5 mb-3">Follow Us</h1>
+                        <div class="footerIcons d-flex gap-3 justify-content-center">
+                            <img src="./img/facebook.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
+                            <img src="./img/twitter.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
+                            <img src="./img/instagram.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
+                            <img src="./img/whatsapp.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
+                        </div>
+                    </div>
+                    <div class="footerRightMenu">
+                        <span class="copyright text-muted">© KANAAN SHOE COLLECTIONS. All rights reserved. 2024.</span>
+                        <span class="copyright text-muted">Made by <a href="tel:+254769525570" class="text-white text-decoration-none">@wenstech software solutions</a>.</span>
+                    </div>
                 </div>
-            </div>
-            <div class="footerRightMenu">
-                <span class="copyright">&copy; KANAAN SHOE COLLECTIONS. All rights reserved. 2024.</span>
-
-                <span class="copyright">Made by <a href="tel:+254769525570">@wenstech software solutions</a>. 
-
-
             </div>
         </div>
     </footer>
@@ -294,31 +285,31 @@
         const closeSearch = document.getElementById('closeSearch');
     
         searchIcons.forEach(icon => {
-          icon.addEventListener('click', (e) => {
-            e.preventDefault();
-            searchBar.style.display = 'block';
-            // Use setTimeout to ensure display:block is applied before adding the show class
-            setTimeout(() => {
-              searchBar.classList.add('show');
-              searchBar.querySelector('input').focus();
-            }, 10);
-          });
+            icon.addEventListener('click', (e) => {
+                e.preventDefault();
+                searchBar.classList.remove('d-none');
+                searchBar.classList.add('show');
+                searchBar.querySelector('input').focus();
+            });
         });
     
         closeSearch.addEventListener('click', () => {
-          searchBar.classList.remove('show');
-          // Wait for transition to complete before hiding
-          setTimeout(() => {
-            searchBar.style.display = 'none';
-          }, 1000);
+            searchBar.classList.remove('show');
+            setTimeout(() => {
+                searchBar.classList.add('d-none');
+            }, 1000); // Match the transition duration in CSS
         });
-      </script>
+    </script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="
-https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
-"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>

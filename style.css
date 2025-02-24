@@ -64,7 +64,7 @@ body {
   }
   
   /* Media query for smaller devices (below 768px) */
-  @media (max-width: 800px) {
+  @media (max-width: 991px) {
       .about-us-section {
           text-align: center; /* Center-align content on small devices */
       }

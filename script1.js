@@ -160,4 +160,11 @@ $(document).ready(function() {
         }
         displayShoes(shoesToDisplay);
     });
+
+    // Hamburger menu toggle for small devices (toggle both sidebar and nav-right)
+    $('.hamburger').on('click', function() {
+        $('.sidebar, .nav-right').toggleClass('active');
+    });
+
+    // No custom dropdown toggle needed for Account; Bootstrap handles it
 });

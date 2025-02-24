@@ -500,6 +500,78 @@ footer {
   color: #36abdd; /* Hover effect for interactivity */
 }
 
+/* Responsive Adjustments for Smaller Devices */
+@media (max-width: 768px) {
+  footer {
+      padding: 20px 0; /* Reduced padding on tablets for compactness */
+  }
+
+  .footerMenuTitle {
+      font-size: 1rem; /* Smaller title on tablets for readability */
+      margin-bottom: 15px; /* Reduced margin for tighter spacing */
+  }
+
+  .footerListItem a {
+      font-size: 0.9rem; /* Slightly smaller text on tablets */
+  }
+
+  .footerMail {
+      flex-direction: column; /* Stack input and button vertically on tablets */
+      align-items: stretch; /* Stretch to full width */
+  }
+
+  .footerInput {
+      width: 100%; /* Full width on tablets */
+      margin-bottom: 10px; /* Space between input and button */
+  }
+
+  .footerButton {
+      width: 100%; /* Full width on tablets */
+  }
+
+  .footerIcons {
+      justify-content: center; /* Center icons on tablets */
+      gap: 10px; /* Reduced gap for tighter spacing */
+  }
+
+  .copyright {
+      font-size: 0.8rem; /* Smaller copyright text on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+      padding: 1px 0; /* Further reduced padding on phones for compactness */
+  }
+
+  .footerMenuTitle {
+      font-size: 0.9rem; /* Even smaller title on phones */
+      margin-bottom: 10px; /* Minimum margin for tight spacing */
+  }
+
+  .footerListItem a {
+      font-size: 0.8rem; /* Smaller text on phones for readability */
+  }
+
+  .footerInput {
+      padding: 8px 12px; /* Reduced padding for smaller screens */
+      font-size: 0.9rem; /* Smaller font for input */
+  }
+
+  .footerButton {
+      padding: 8px 16px; /* Reduced padding for smaller screens */
+      font-size: 0.9rem; /* Smaller font for button */
+  }
+
+  .footerIcon {
+      width: 20px; /* Slightly smaller icons on phones */
+      height: 20px;
+  }
+
+  .copyright {
+      font-size: 0.7rem; /* Even smaller copyright text on phones */
+  }
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .slider {

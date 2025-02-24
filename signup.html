@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="others.css">
-    <title>KANAAN SHOE COLLECTION - Login</title>
+    <title>KANAAN SHOE COLLECTION - Sign Up</title>
     <!-- Favicon -->
     <link rel="icon" href="./images/logo.webp" type="image/webp" sizes="16x16" />
 </head>
@@ -23,16 +23,21 @@
                     <div class="card-body p-5">
                         <div class="text-center mb-4">
                             <img src="./images/logo.webp" alt="KANAAN Logo" class="mb-3" style="width: 100px; height: 100px; border-radius: 50%;" data-aos="zoom-in">
-                            <h2 class="card-title fw-bold text-dark" data-aos="fade-up">Welcome Back</h2>
-                            <p class="text-muted" data-aos="fade-up">Sign in to your KANAAN account</p>
+                            <h2 class="card-title fw-bold text-dark" data-aos="fade-up">Create Your Account</h2>
+                            <p class="text-muted" data-aos="fade-up">Join KANAAN for exclusive offers</p>
                         </div>
-                        <form id="loginForm" class="needs-validation" novalidate>
+                        <form id="signupForm" class="needs-validation" novalidate>
                             <div class="mb-3" data-aos="fade-right">
+                                <label for="name" class="form-label fw-bold text-dark">Full Name</label>
+                                <input type="text" class="form-control form-control-lg" id="name" placeholder="Enter your full name" required>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                            <div class="mb-3" data-aos="fade-left">
                                 <label for="email" class="form-label fw-bold text-dark">Email Address</label>
                                 <input type="email" class="form-control form-control-lg" id="email" placeholder="Enter your email" required>
                                 <div class="invalid-feedback">Please enter a valid email address.</div>
                             </div>
-                            <div class="mb-3" data-aos="fade-left">
+                            <div class="mb-3" data-aos="fade-right">
                                 <label for="password" class="form-label fw-bold text-dark">Password</label>
                                 <div class="input-group">
                                     <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your password" required>
@@ -40,16 +45,16 @@
                                         <i class="fas fa-eye"></i>
                                     </button>
                                 </div>
-                                <div class="invalid-feedback">Please enter your password.</div>
+                                <div class="invalid-feedback">Please enter a password (min 8 characters).</div>
                             </div>
-                            <div class="mb-3 form-check" data-aos="fade-up">
-                                <input type="checkbox" class="form-check-input" id="rememberMe">
-                                <label class="form-check-label text-dark" for="rememberMe">Remember me</label>
+                            <div class="mb-3" data-aos="fade-left">
+                                <label for="confirmPassword" class="form-label fw-bold text-dark">Confirm Password</label>
+                                <input type="password" class="form-control form-control-lg" id="confirmPassword" placeholder="Confirm your password" required>
+                                <div class="invalid-feedback">Passwords must match.</div>
                             </div>
-                            <button type="submit" class="btn btn-success w-100 py-3 fw-bold fs-5" data-aos="zoom-in">Sign In</button>
+                            <button type="submit" class="btn btn-success w-100 py-3 fw-bold fs-5" data-aos="zoom-in">Sign Up</button>
                             <div class="text-center mt-3" data-aos="fade-up">
-                                <p class="text-dark">Don't have an account? <a href="signup.html" class="text-success text-decoration-none fw-bold">Sign Up</a></p>
-                                <p class="text-dark">Forgot your password? <a href="#" class="text-success text-decoration-none fw-bold">Reset Password</a></p>
+                                <p class="text-dark">Already have an account? <a href="login.html" class="text-success text-decoration-none fw-bold">Sign In</a></p>
                             </div>
                         </form>
                     </div>
@@ -84,19 +89,25 @@
 
         document.getElementById('togglePassword').addEventListener('click', function () {
             const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
             password.setAttribute('type', type);
+            confirmPassword.setAttribute('type', type);
             this.querySelector('i').className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
         });
 
-        // Simulate login (for demo purposes)
-        document.getElementById('loginForm').addEventListener('submit', function (e) {
+        // Simulate signup (for demo purposes)
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
             e.preventDefault();
+            const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            if (email && password) {
-                alert('Login successful! Redirecting to your account...');
-                window.location.href = 'account.html';
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (name && email && password && password === confirmPassword) {
+                alert('Signup successful! Redirecting to login...');
+                window.location.href = 'login.html';
+            } else if (password !== confirmPassword) {
+                alert('Passwords do not match!');
             }
         });
     </script>

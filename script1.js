@@ -2,19 +2,42 @@ $(document).ready(function() {
     // Separate arrays for each category (as provided)
     let mens_shoes = [
         { id: 1, name: "Fashion Men's Sneaker", price: 899, rating: 4, image: "./images/nike1.jpg", details: "Lightweight, breathable running shoes for men.", category: "Men's Shoes" },
+        { id: 3, name: "Alagzi Men's Formal Shoes", price: 1190, rating: 4, image: "./images/alagzi.jpg", details: "Elegant casual shoes for formal occasions.", category: "Men's Shoes" },
+        { id: 3, name: "Alagzi Men's Formal Shoes", price: 1190, rating: 4, image: "./images/alagzi.jpg", details: "Elegant casual shoes for formal occasions.", category: "Men's Shoes" },
+        { id: 3, name: "Alagzi Men's Formal Shoes", price: 1190, rating: 4, image: "./images/alagzi.jpg", details: "Elegant casual shoes for formal occasions.", category: "Men's Shoes" },
+        { id: 3, name: "Alagzi Men's Formal Shoes", price: 1190, rating: 4, image: "./images/alagzi.jpg", details: "Elegant casual shoes for formal occasions.", category: "Men's Shoes" },
         { id: 3, name: "Alagzi Men's Formal Shoes", price: 1190, rating: 4, image: "./images/alagzi.jpg", details: "Elegant casual shoes for formal occasions.", category: "Men's Shoes" }
     ];
 
-    let womens_shoes = []; // Add women's shoes here if you have data
+    let womens_shoes = [
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" }
+    ]; // Add women's shoes here if you have data
 
-    let kids_shoes = []; // Add kids' shoes here if you have data
+    let kids_shoes = [
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" }
+    ]; // Add kids' shoes here if you have data
 
     let sports_shoes = [
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
+        { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" },
         { id: 2, name: "Sports Men's Shoes", price: 1200, rating: 4.5, image: "./images/nike4.jpg", details: "Durable sports shoes for running and training.", category: "Sports Shoes" }
     ];
 
     let casual_shoes = [
-        { id: 4, name: "Couple Canvas Low Top", price: 759, rating: 4.2, image: "shoe4.jpg", details: "Classic casual canvas shoes for couples.", category: "Casual Shoes" }
+        { id: 4, name: "Couple Canvas Low Top", price: 759, rating: 4.2, image: "./images/canvas.jpg", details: "Classic casual canvas shoes for couples.", category: "Casual Shoes" },
+        { id: 4, name: "Couple Canvas Low Top", price: 759, rating: 4.2, image: "./images/canvas.jpg", details: "Classic casual canvas shoes for couples.", category: "Casual Shoes" },
+        { id: 4, name: "Couple Canvas Low Top", price: 759, rating: 4.2, image: "./images/canvas.jpg", details: "Classic casual canvas shoes for couples.", category: "Casual Shoes" },
+        { id: 4, name: "Couple Canvas Low Top", price: 759, rating: 4.2, image: "./images/canvas.jpg", details: "Classic casual canvas shoes for couples.", category: "Casual Shoes" }
     ];
 
     // Combine all shoes for search and sort functionality

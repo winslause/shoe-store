@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>KANAAN SHOE COLLECTION</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logo.webp" type="image/webp" sizes="16x16" />
+</head>
+
+<body>
+    <!-- Search Bar -->
+  <div id="searchBar" class="container-fluid py-3" style="display: none; background-color: #f8f9fa; border-bottom: 1px solid #dee2e6;">
+    <div class="container">
+      <div class="position-relative">
+        <input style="margin-left: 30px; margin-right: 30px;" type="text" class="form-control" placeholder="Search..." aria-label="Search">
+        <button class="btn position-absolute end-0 top-50 translate-middle-y border-0" type="button" id="closeSearch" style="background: none; padding-right: 15px;">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #072D4B;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a style="margin: 10px;" class="navbar-brand d-flex align-items-center" href="#">
+        
+        <span class="brand-text" style="color: rgba(0, 0, 0, 0.5);"><img src="images/logo.webp" width="50" height="50" style="border-radius: 50%;" alt="Shoo Store Logo"><i style="margin-left: 5px;">KANAAN SHOE COLLECTION</i></span>
+        <!-- <p style="color: deepskyblue;"><i>WE BUILD YOUR VISION</i></p> -->
+      </a>
+      <a class="nav-link d-lg-none search-icon-mobile" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a style="color: #ffffff !important;" class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a style="color: #ffffff !important;" class="nav-link" href="#about-us">About us</a></li>
+          <li class="nav-item"><a style="color: #ffffff !important;" class="nav-link" href="#services">All Brands</a></li>
+          <!-- <li class="nav-item"><a style="color: #ffffff !important;" class="nav-link" href="#process">Our Process</a></li> -->
+          <!-- <li class="nav-item"><a style="color: #ffffff !important;" class="nav-link" href="#gallery">Portfolio</a></li> -->
+          <li class="nav-item"><a style="color: #ffffff !important;" class="nav-link" href="#contact-us">Contact Us</a></li>
+          <li class="nav-item search-icon d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="fas fa-search" style="color: #36abdd !important;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Navigation Bar -->
+    <nav id="nav">
+        <!-- Logo, Search bar -->
+        <div class="navTop">
+            <!-- <div class="navItem">
+                <img src="images/logo.webp" width="80" height="80" style="border-radius: 50%;" alt="Shoo Store Logo">
+            </div> -->
+            <div class="navItem">
+            </div>
+            <!-- <div class="navItem">
+                <span class="limitedOffer">Limited Offer!</span>
+            </div> -->
+
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem">NIKE AIRMAX</h3>
+            <h3 class="menuItem">CLARK</h3>
+            <h3 class="menuItem">BOSS SNEAKERS</h3>
+            <h3 class="menuItem">CRATER</h3>
+            <h3 class="menuItem">HIPPIE</h3>
+        </div>
+    </nav>
+
+    <!-- Slider -->
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="./img/nike1.png" alt="Nike Air Force"  class="sliderImage" >
+                <div class="sliderBgCircle"></div>
+                <h1 class="sliderTitle">NIKE AIRMAX <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">3000/=</h2>
+                <a href="#product"><button class="buyButton">BUY NOW</button></a>
+
+            </div>
+            <div class="sliderItem">
+                <img src="./images/clack1.png" alt="Nike Jordan"  class="sliderImage" >
+                <div class="sliderBgCircle"></div>
+                <h1 class="sliderTitle">CLARK <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">3000/=</h2>
+                <a href="#product"><button class="buyButton">BUY NOW</button></a>
+
+            </div>
+            <div class="sliderItem">
+                <img src="./images/sneaker.png" alt="Nike Blazer" class="sliderImage">
+                <div class="sliderBgCircle"></div>
+                <h1 class="sliderTitle">BOSS SNEAKERS <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">3000/=</h2>
+                <a href="#product"><button class="buyButton">BUY NOW</button></a>
+
+            </div>
+            <div class="sliderItem">
+                <img src="./img/crater.png" alt="Nike Crater" class="sliderImage">
+                <div class="sliderBgCircle"></div>
+                <h1 class="sliderTitle">CRATER <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">30000/=</h2>
+                <a href="#product"><button class="buyButton">BUY NOW</button></a>
+
+            </div>
+            <div class="sliderItem">
+                <img src="./img/hippie.png" alt="Nike Hippie" class="sliderImage">
+                <div class="sliderBgCircle"></div>
+                <h1 class="sliderTitle">HIPPIE <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">3000/=</h2>
+                <a href="#product"><button class="buyButton">BUY NOW</button></a>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  Features -->
+    <div class="features">
+        <div class="feature">
+            <img src="./images/booking.png" alt="" class="featureIcon">
+            <span class="featureTitle">ONLINE BOOKING</span>
+            <span class="featureDescription">Online booking available on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">ONE WEEK RETURN</span>
+            <span class="featureDescription">No question return and easy refund in 7 days.</span>
+        </div>
+        <!-- <div class="feature">
+            <img class="featureIcon" src="./img/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDescription">Buy gift cards and use coupon codes easily.</span>
+        </div> -->
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">CONTACT US</span>
+            <span class="featureDescription">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <div class="product" id="product">
+        <img src="./img/nike1.png" alt="" class="productImage">
+        <div class="productDetails" style="margin-bottom: 10px; padding: 10px;">
+            <h1 class="productTitle">NIKE AIRMAX</h1>
+            <h2 class="productPrice">3000/=</h2>
+            <p class="productDescription">Experience ultimate comfort and style with the NIKE AIRMAX, designed for superior performance and a sleek look.</p>
+
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">42</div>
+                <div class="size">43</div>
+                <div class="size">44</div>
+            </div>
+            <button class="productButton">Book NOW</button>
+        </div><br>
+        <!-- Payment -->
+        <div class="payment" style="padding: 70px;">
+            <h1 class="payTitle">Personal Information</h1>
+            <label>Name & Surname</label>
+            <input type="text" class="payInput" placeholder="Janette Bennett">
+            <label>Phone</label>
+            <input type="text" class="payInput" placeholder="+1 123 4567">
+            <label>Address</label>
+            <input type="text" class="payInput" placeholder="Delta St. 23 42-167">
+            <button class="payButton">Checkout</button>
+            <span class="close" style="margin-bottom: 20px; padding-bottom:20px;">X</span>
+            <!-- <h1 class="payTitle">Card Information</h1>
+            <div class="cardIcons">
+                <img src="./img/visa.png" width="35px" alt="visa" class="cardIcon">
+                <img src="./img/master.png" width="35px" alt="mastercard" class="cardIcon">
+            </div>
+            <input type="password" class="payInput" placeholder="Card Number">
+            <div class="cardInfo">
+                <input type="text" class="payInput small" placeholder="mm">
+                <input type="text" class="payInput small" placeholder="yyyy">
+                <input type="text" class="payInput small" placeholder="cvv">
+            </div> -->
+            
+        </div>
+    </div>
+
+    <!-- Gallery -->
+
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleyTitle">Experience the Best</h1>
+            <img src="./images/bb.jpg"
+                alt="" class="galleryImage">
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Just Do it</h1>
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="galleryImage">
+        </div>
+        <div class="galleryItem">
+            <img src="./images/boss.png"
+                alt="" class="galleryImage">
+            <h1 class="galleryTitle">Be Your Own Boss</h1>
+        </div>
+        
+    </div>
+
+    <!-- New Season -->
+
+    <div class="newSeason">
+        <div class="nsItem">
+            <img src="./images/col.jpg"
+                alt="" class="nsImage">
+        </div>
+        <div class="nsItem">
+            <h3 class="nsTitleSmall">NEW ARRIVALS</h3>
+            <h1 class="nsTitle">New Collections</h1>
+            <a href="#nav">
+                <button class="nsButton">CHOOSE YOUR STYLE</button>
+            </a>
+        </div>
+        <div class="nsItem">
+            <img src="./images/lov.jpg"
+                alt="" class="nsImage">
+        </div>
+    </div>
+
+
+    <!-- about us -->
+    <section id="about-us" class="about-us-section text-light">
+        <div class="container">
+            <center><h2 >About Us</h2></center>
+            
+            <div class="row align-items-center">
+                
+                <!-- Text Content -->
+                <div class="col-lg-6 col-12 about-content text-light">
+                    
+                    <p style="color: white;">KANAAN is a leading shoe company in Kenya, known for its innovative designs, comfort, and quality craftsmanship. Our mission is to provide every customer with footwear that not only elevates their style but also guarantees long-lasting comfort. With a focus on sustainability and customer satisfaction, KANAAN continues to redefine fashion in the footwear industry.</p>
+                </div>
+                
+                <!-- Logo -->
+                <div class="col-lg-6 col-12 text-center logo-container">
+                    <img src="./images/logo.webp" alt="KANAAN Logo" class="logo">
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="footerMenuTitle">About Us</h1>
+                <ul class="footerMenuList">
+                    <li class="footerListItem">Company</li>
+                    <li class="footerListItem">Contact</li>
+                    <li class="footerListItem">Careers</li>
+                    <li class="footerListItem">Affiliates</li>
+                    <li class="footerListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="footerMenuTitle">Useful Links</h1>
+                <ul class="footerMenuList">
+                    <li class="footerListItem">Support</li>
+                    <li class="footerListItem">Refund</li>
+                    <li class="footerListItem">FAQ</li>
+                    <li class="footerListItem">Feedback</li>
+                    <li class="footerListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="footerMenuTitle">Products</h1>
+                <ul class="footerMenuList">
+                    <li class="footerListItem">Air Force</li>
+                    <li class="footerListItem">Air Jordan</li>
+                    <li class="footerListItem">Blazer</li>
+                    <li class="footerListItem">Crater</li>
+                    <li class="footerListItem">Hippie</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="footerMenuTitle">Subscribe to our newsletter</h1>
+                <div class="footerMail">
+                    <input type="text" placeholder="your@email.com" class="footerInput">
+                    <button class="footerButton">Join</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="footerMenuTitle">Follow Us</h1>
+                <div class="footerIcons">
+                    <img src="./img/facebook.png" alt="" class="footerIcon">
+                    <img src="./img/twitter.png" alt="" class="footerIcon">
+                    <img src="./img/instagram.png" alt="" class="footerIcon">
+                    <img src="./img/whatsapp.png" alt="" class="footerIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">&copy; KANAAN SHOE COLLECTIONS. All rights reserved. 2024.</span>
+
+                <span class="copyright">Made by <a href="tel:+254769525570">@wenstech software solutions</a>. 
+
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        const searchIcons = document.querySelectorAll('.search-icon, .search-icon-mobile');
+        const searchBar = document.getElementById('searchBar');
+        const closeSearch = document.getElementById('closeSearch');
+    
+        searchIcons.forEach(icon => {
+          icon.addEventListener('click', (e) => {
+            e.preventDefault();
+            searchBar.style.display = 'block';
+            // Use setTimeout to ensure display:block is applied before adding the show class
+            setTimeout(() => {
+              searchBar.classList.add('show');
+              searchBar.querySelector('input').focus();
+            }, 10);
+          });
+        });
+    
+        closeSearch.addEventListener('click', () => {
+          searchBar.classList.remove('show');
+          // Wait for transition to complete before hiding
+          setTimeout(() => {
+            searchBar.style.display = 'none';
+          }, 1000);
+        });
+      </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="
+https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+"></script>
+</body>
+
+</html>

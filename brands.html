@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">KANAANSHOECOLLECTION</div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search shoes..." autocomplete="off">
+                <button id="searchButton">Search</button>
+            </div>
+            <div class="nav-right">
+                <a href="index.html">Home</a>
+                <a href="#">Account</a>
+                <a href="#">Help</a>
+                <a href="#">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <aside class="sidebar">
+                <h3>Category</h3>
+                <ul>
+                    <li>Men's Shoes</li>
+                    <li>Women's Shoes</li>
+                    <li>Kids' Shoes</li>
+                    <li>Sports Shoes</li>
+                    <li>Casual Shoes</li>
+                </ul>
+            </aside>
+
+            <section class="content">
+                <div class="sort-options">
+                    <label>Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+                <div id="shoeList" class="shoe-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>

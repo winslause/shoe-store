@@ -57,21 +57,21 @@
     </nav>
 
     <!-- Navigation Bar (Custom Nav) -->
-    <nav id="nav" class="container py-3">
-        <div class="navTop d-flex justify-content-between align-items-center">
-            <div class="navItem"></div>
-        </div>
-        <div class="navBottom d-flex justify-content-center align-items-center flex-wrap">
-            <h3 class="menuItem mx-2 my-2">NIKE AIRMAX</h3>
-            <h3 class="menuItem mx-2 my-2">CLARK</h3>
-            <h3 class="menuItem mx-2 my-2">BOSS SNEAKERS</h3>
-            <h3 class="menuItem mx-2 my-2">CRATER</h3>
-            <h3 class="menuItem mx-2 my-2">HIPPIE</h3>
-        </div>
-    </nav>
+<nav id="nav" class="py-3" style="width: 100% !important; margin: 0 !important; padding: 0 !important; background-color: #111;">
+    <div class="navTop d-flex justify-content-between align-items-center">
+        <div class="navItem"></div>
+    </div>
+    <div class="navBottom d-flex justify-content-center align-items-center flex-wrap">
+        <h3 class="menuItem mx-2 my-2">NIKE AIRMAX</h3>
+        <h3 class="menuItem mx-2 my-2">CLARK</h3>
+        <h3 class="menuItem mx-2 my-2">BOSS SNEAKERS</h3>
+        <h3 class="menuItem mx-2 my-2">CRATER</h3>
+        <h3 class="menuItem mx-2 my-2">HIPPIE</h3>
+    </div>
+</nav>
 
     <!-- Slider -->
-    <div class="slider position-relative">
+    <div class="slider position-relative" style="background-color: white !important;">
         <div class="sliderWrapper d-flex">
             <div class="sliderItem flex-column align-items-center justify-content-center position-relative w-100">
                 <img src="./img/nike1.png" alt="Nike Air Force" class="sliderImage img-fluid" data-aos="fade-up">
@@ -132,42 +132,49 @@
         </div>
     </div>
 
-    <!-- Products -->
-    <div class="product position-relative" id="product">
-        <img src="./img/nike1.png" alt="" class="productImage w-100 w-md-50">
-        <div class="productDetails position-absolute top-0 end-0 w-100 w-md-50 p-5">
-            <h1 class="productTitle display-1 fw-bold">NIKE AIRMAX</h1>
-            <h2 class="productPrice fs-1">3000/=</h2>
-            <p class="productDescription fs-4 text-muted">Experience ultimate comfort and style with the NIKE AIRMAX, designed for superior performance and a sleek look.</p>
-            <div class="colors d-flex mb-3">
-                <div class="color me-2" style="width: 32px; height: 32px; border-radius: 5px; background-color: black;"></div>
-                <div class="color" style="width: 32px; height: 32px; border-radius: 5px; background-color: darkblue;"></div>
+<!-- Products -->
+<div class="product" id="product" style="min-height: 100vh; background-color: whitesmoke;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+                <img src="./img/nike1.png" alt="" class="productImage w-100">
             </div>
-            <div class="sizes d-flex mb-3">
-                <div class="size me-2 px-3 py-2 border border-dark">42</div>
-                <div class="size me-2 px-3 py-2 border border-dark">43</div>
-                <div class="size px-3 py-2 border border-dark">44</div>
+            <div class="col-12 col-md-6">
+                <div class="productDetails p-5">
+                    <h1 class="productTitle display-1 fw-bold">NIKE AIRMAX</h1>
+                    <h2 class="productPrice fs-1">3000/=</h2>
+                    <p class="productDescription fs-4 text-muted">Experience ultimate comfort and style with the NIKE AIRMAX, designed for superior performance and a sleek look.</p>
+                    <div class="colors d-flex mb-3">
+                        <div class="color me-2" style="width: 32px; height: 32px; border-radius: 5px; background-color: black;"></div>
+                        <div class="color" style="width: 32px; height: 32px; border-radius: 5px; background-color: darkblue;"></div>
+                    </div>
+                    <div class="sizes d-flex mb-3">
+                        <div class="size me-2 px-3 py-2 border border-dark">42</div>
+                        <div class="size me-2 px-3 py-2 border border-dark">43</div>
+                        <div class="size px-3 py-2 border border-dark">44</div>
+                    </div>
+                    <button class="productButton btn btn-dark float-end px-4 py-2">Book NOW</button>
+                </div>
             </div>
-            <button class="productButton btn btn-dark float-end px-4 py-2">Book NOW</button>
-        </div>
-        <!-- Payment -->
-        <div class="payment position-absolute d-none flex-column" style="width: 500px; height: 450px; background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px); z-index: 9999; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; padding: 10px 50px; border-radius: 10px; box-shadow: 0 0 13px 2px rgba(0,0,0,0.3);">
-            <h1 class="payTitle fs-4 text-muted">Personal Information</h1>
-            <label class="form-label fs-6 fw-light">Name & Surname</label>
-            <input type="text" class="payInput form-control mb-2" placeholder="Janette Bennett">
-            <label class="form-label fs-6 fw-light">Phone</label>
-            <input type="text" class="payInput form-control mb-2" placeholder="+1 123 4567">
-            <label class="form-label fs-6 fw-light">Address</label>
-            <input type="text" class="payInput form-control mb-2" placeholder="Delta St. 23 42-167">
-            <button class="payButton btn btn-success w-100 mt-3">Checkout</button>
-            <span class="close position-absolute top-0 end-0 bg-dark text-white d-flex align-items-center justify-content-center cursor-pointer p-1 rounded-circle" style="width: 20px; height: 20px;">X</span>
         </div>
     </div>
-
+    <!-- Payment -->
+    <div class="payment position-fixed d-none flex-column" style="width: 500px; max-width: 90%; height: auto; background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px); z-index: 9999; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 10px; box-shadow: 0 0 13px 2px rgba(0,0,0,0.3);">
+        <h1 class="payTitle fs-4 text-muted">Personal Information</h1>
+        <label class="form-label fs-6 fw-light">Name & Surname</label>
+        <input type="text" class="payInput form-control mb-2" placeholder="Janette Bennett">
+        <label class="form-label fs-6 fw-light">Phone</label>
+        <input type="text" class="payInput form-control mb-2" placeholder="+1 123 4567">
+        <label class="form-label fs-6 fw-light">Address</label>
+        <input type="text" class="payInput form-control mb-2" placeholder="Delta St. 23 42-167">
+        <button class="payButton btn btn-success w-100 mt-3">Checkout</button>
+        <span class="close position-absolute top-0 end-0 bg-dark text-white d-flex align-items-center justify-content-center cursor-pointer p-1 rounded-circle" style="width: 20px; height: 20px;">X</span>
+    </div>
+</div>
     <!-- Gallery -->
     <div class="gallery container py-5">
         <div class="row justify-content-between">
-            <div class="galleryItem col-12 col-md-4 text-center mb-4">
+            <div class="galleryItem col-12 col-md-4 text-center mb-4" >
                 <h1 class="galleryTitle fw-bold mb-3" data-aos="fade-up">Experience the Best</h1>
                 <img src="./images/bb.jpg" alt="" class="galleryImage w-100" data-aos="fade-up">
             </div>
@@ -215,69 +222,68 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="footerLeft col-12 col-md-8">
-                    <div class="row">
-                        <div class="footerMenu col-12 col-md-4 mb-4">
-                            <h1 class="footerMenuTitle fs-5">About Us</h1>
-                            <ul class="footerMenuList list-unstyled">
-                                <li class="footerListItem text-muted mb-2">Company</li>
-                                <li class="footerListItem text-muted mb-2">Contact</li>
-                                <li class="footerListItem text-muted mb-2">Careers</li>
-                                <li class="footerListItem text-muted mb-2">Affiliates</li>
-                                <li class="footerListItem text-muted mb-2">Stores</li>
-                            </ul>
-                        </div>
-                        <div class="footerMenu col-12 col-md-4 mb-4">
-                            <h1 class="footerMenuTitle fs-5">Useful Links</h1>
-                            <ul class="footerMenuList list-unstyled">
-                                <li class="footerListItem text-muted mb-2">Support</li>
-                                <li class="footerListItem text-muted mb-2">Refund</li>
-                                <li class="footerListItem text-muted mb-2">FAQ</li>
-                                <li class="footerListItem text-muted mb-2">Feedback</li>
-                                <li class="footerListItem text-muted mb-2">Stories</li>
-                            </ul>
-                        </div>
-                        <div class="footerMenu col-12 col-md-4 mb-4">
-                            <h1 class="footerMenuTitle fs-5">Products</h1>
-                            <ul class="footerMenuList list-unstyled">
-                                <li class="footerListItem text-muted mb-2">Air Force</li>
-                                <li class="footerListItem text-muted mb-2">Air Jordan</li>
-                                <li class="footerListItem text-muted mb-2">Blazer</li>
-                                <li class="footerListItem text-muted mb-2">Crater</li>
-                                <li class="footerListItem text-muted mb-2">Hippie</li>
-                            </ul>
-                        </div>
+<footer class=" py-5" style="color: white !important;">
+    <div class="container">
+        <div class="row g-4">
+            <div class="footerLeft col-12 col-md-8">
+                <div class="row g-4">
+                    <div class="footerMenu col-12 col-md-4">
+                        <h1 class="footerMenuTitle fs-5 fw-bold text-white mb-3">About Us</h1>
+                        <ul class="footerMenuList list-unstyled">
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Company</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Contact</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Careers</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Affiliates</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Stores</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="footerRight col-12 col-md-4">
-                    <div class="footerRightMenu mb-4">
-                        <h1 class="footerMenuTitle fs-5 mb-3">Subscribe to our newsletter</h1>
-                        <div class="footerMail d-flex flex-column flex-md-row">
-                            <input type="text" placeholder="your@email.com" class="footerInput form-control me-0 me-md-2 mb-2 mb-md-0">
-                            <button class="footerButton btn btn-dark w-100 w-md-auto">Join</button>
-                        </div>
+                    <div class="footerMenu col-12 col-md-4">
+                        <h1 class="footerMenuTitle fs-5 fw-bold text-white mb-3">Useful Links</h1>
+                        <ul class="footerMenuList list-unstyled" style="color: white !important;">
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Support</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Refund</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">FAQ</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Feedback</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Stories</a></li>
+                        </ul>
                     </div>
-                    <div class="footerRightMenu mb-4">
-                        <h1 class="footerMenuTitle fs-5 mb-3">Follow Us</h1>
-                        <div class="footerIcons d-flex gap-3 justify-content-center">
-                            <img src="./img/facebook.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
-                            <img src="./img/twitter.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
-                            <img src="./img/instagram.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
-                            <img src="./img/whatsapp.png" alt="" class="footerIcon" style="width: 20px; height: 20px;" data-aos="fade-up">
-                        </div>
-                    </div>
-                    <div class="footerRightMenu">
-                        <span class="copyright text-muted">© KANAAN SHOE COLLECTIONS. All rights reserved. 2024.</span>
-                        <span class="copyright text-muted">Made by <a href="tel:+254769525570" class="text-white text-decoration-none">@wenstech software solutions</a>.</span>
+                    <div class="footerMenu col-12 col-md-4">
+                        <h1 class="footerMenuTitle fs-5 fw-bold text-white mb-3">Products</h1>
+                        <ul class="footerMenuList list-unstyled" style="color: white !important;">
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Air Force</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Air Jordan</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Blazer</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Crater</a></li>
+                            <li class="footerListItem text-muted mb-2"><a href="#" class="text-muted text-decoration-none" style="color: white !important;">Hippie</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="footerRight col-12 col-md-4">
+                <div class="footerRightMenu mb-4">
+                    <h1 class="footerMenuTitle fs-5 fw-bold text-white mb-3">Subscribe to our newsletter</h1>
+                    <div class="footerMail d-flex flex-column flex-md-row">
+                        <input type="email" placeholder="your@email.com" class="footerInput form-control me-0 me-md-2 mb-2 mb-md-0" required>
+                        <button class="footerButton btn btn-outline-light w-100 w-md-auto">Join</button>
+                    </div>
+                </div>
+                <div class="footerRightMenu mb-4">
+                    <h1 class="footerMenuTitle fs-5 fw-bold text-white mb-3">Follow Us</h1>
+                    <div class="footerIcons d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="#" class="footerIcon-link"><img src="./img/facebook.png" alt="Facebook" class="footerIcon" style="width: 24px; height: 24px;"></a>
+                        <a href="#" class="footerIcon-link"><img src="./img/twitter.png" alt="Twitter" class="footerIcon" style="width: 24px; height: 24px;"></a>
+                        <a href="#" class="footerIcon-link"><img src="./img/instagram.png" alt="Instagram" class="footerIcon" style="width: 24px; height: 24px;"></a>
+                        <a href="#" class="footerIcon-link"><img src="./img/whatsapp.png" alt="WhatsApp" class="footerIcon" style="width: 24px; height: 24px;"></a>
+                    </div>
+                </div>
+                <div class="footerRightMenu">
+                    <span class="copyright text-muted" style="color: white !important;">© KANAAN SHOE COLLECTIONS. All rights reserved. 2024.</span>
+                    <span class="copyright text-muted d-block mt-2" style="color: white !important;">Made by <a href="tel:+254769525570" class="text-white text-decoration-none" >@wenstech software solutions</a>.</span>
+                </div>
+            </div>
         </div>
-    </footer>
-
+    </div>
+</footer>
     <script>
         // Search functionality
         const searchIcons = document.querySelectorAll('.search-icon, .search-icon-mobile');

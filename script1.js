@@ -58,7 +58,7 @@ $(document).ready(function() {
                 <h3>${shoe.name}</h3>
                 <p class="price">KSh ${shoe.price}</p>
                 <p class="rating">⭐ ${shoe.rating} (${Math.floor(Math.random() * 500) + 100} reviews)</p>
-                <button class="book-btn">Book</button>
+                <button class="book-btn">Order Now</button>
                 <div class="shoe-details">${shoe.details}</div>
             `);
             shoeList.append(shoeDiv);

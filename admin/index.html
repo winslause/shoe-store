@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANAAN Shoe Collection - Admin Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons (optional, for high-standard design) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">KANAAN Admin Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Manage
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#orders">Orders</a></li>
+                            <li><a class="dropdown-item" href="#users">Users</a></li>
+                            <li><a class="dropdown-item" href="#sales">Sales</a></li>
+                            <li><a class="dropdown-item" href="#products">Products</a></li>
+                            <li><a class="dropdown-item" href="#contact">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid py-4">
+        <div class="row">
+            <!-- Sidebar (Collapsible on Small Devices) -->
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse" id="sidebar">
+                <h5 class="mb-4 text-light">Admin Menu</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#orders">Manage Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#users">Registered Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#sales">Sales Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#products">Add Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#contact">Contact Management</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content Area -->
+            <div class="col-md-9 col-lg-10">
+                <!-- Dashboard -->
+                <section id="dashboard" class="mb-5">
+                    <h2 class="mb-4">Admin Dashboard</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card bg-dark text-light border-0 shadow">
+                                <div class="card-body">
+                                    <h5>Total Orders</h5>
+                                    <p class="card-text fs-4">150</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-dark text-light border-0 shadow">
+                                <div class="card-body">
+                                    <h5>Registered Users</h5>
+                                    <p class="card-text fs-4">200</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-dark text-light border-0 shadow">
+                                <div class="card-body">
+                                    <h5>Total Sales</h5>
+                                    <p class="card-text fs-4">SH.25,000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Manage Orders -->
+                <section id="orders" class="mb-5" style="display: none;">
+                    <h2 class="mb-4">Manage Orders</h2>
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <div class=" table-responsive card-body">
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#12345</td>
+                                        <td>Winslaise Shioso</td>
+                                        <td>KANAAN Classic Sneakers</td>
+                                        <td>2025-02-10</td>
+                                        <td><span class="badge bg-success">Delivered</span></td>
+                                        <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editOrderModal">Edit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#12346</td>
+                                        <td>John Jonte</td>
+                                        <td>KANAAN Leather Boots</td>
+                                        <td>2025-02-15</td>
+                                        <td><span class="badge bg-warning">Pending</span></td>
+                                        <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editOrderModal">Edit</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addOrderModal">Add New Order</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Registered Users -->
+                <section id="users" class="mb-5" style="display: none;">
+                    <h2 class="mb-4">Registered Users</h2>
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <div class=" table-responsive card-body">
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Joined</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Winslaise Shioso</td>
+                                        <td>winslaise383@gmail.com</td>
+                                        <td>2025-01-01</td>
+                                        <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>John Jonte</td>
+                                        <td>jane.doe@example.com</td>
+                                        <td>2025-01-15</td>
+                                        <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addUserModal">Add New User</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sales Management -->
+                <section id="sales" class="mb-5" style="display: none;">
+                    <h2 class="mb-4">Sales Management</h2>
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <div class=" table-responsive card-body">
+                            <h5>Sale Records</h5>
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Revenue</th>
+                                        <th>Profit/Loss</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025-02-10</td>
+                                        <td>KANAAN Classic Sneakers</td>
+                                        <td>50</td>
+                                        <td>SH.4,500</td>
+                                        <td><span class="text-success">+SH.3,000</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-02-15</td>
+                                        <td>KANAAN Leather Boots</td>
+                                        <td>30</td>
+                                        <td>SH.3,900</td>
+                                        <td><span class="text-success">+SH.2,200</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#addSaleModal">Add Sale Record</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add Products -->
+                <section id="products" class="mb-5" style="display: none;">
+                    <h2 class="mb-4">Add New Shoe Product</h2>
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <div class="card-body">
+                            <form id="productForm">
+                                <div class="mb-3">
+                                    <label for="productName" class="form-label">Product Name</label>
+                                    <input type="text" class="form-control" id="productName" placeholder="e.g., Sports Men's Shoes" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productPrice" class="form-label">Price (SH.)</label>
+                                    <input type="number" class="form-control" id="productPrice" step="0.01" placeholder="e.g., 1200" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productRating" class="form-label">Rating (1-5)</label>
+                                    <input type="number" class="form-control" id="productRating" step="0.1" min="1" max="5" placeholder="e.g., 4.5" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productImage" class="form-label">Image URL</label>
+                                    <input type="url" class="form-control" id="productImage" placeholder="e.g., ./images/nike4.jpg" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productDetails" class="form-label">Details</label>
+                                    <textarea class="form-control" id="productDetails" rows="3" placeholder="e.g., Durable sports shoes for running and training." required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productCategory" class="form-label">Category</label>
+                                    <select class="form-select" id="productCategory" required>
+                                        <option value="">Select Category</option>
+                                        <option value="mens_shoes">Men's Shoes</option>
+                                        <option value="womens_shoes">Women's Shoes</option>
+                                        <option value="kids_shoes">Kids' Shoes</option>
+                                        <option value="sports_shoes">Sports Shoes</option>
+                                        <option value="casual_shoes">Casual Shoes</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-success">Add Product</button>
+                            </form>
+                            <h5 class="mt-4">Existing Products</h5>
+                            <table class="table table-dark table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Rating</th>
+                                        <th>Category</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productsTable">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Sports Men's Shoes</td>
+                                        <td>SH.120.00</td>
+                                        <td>4.5</td>
+                                        <td>Sports Shoes</td>
+                                        <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal">Edit</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Management -->
+                <section id="contact" class="mb-5" style="display: none;">
+                    <h2 class="mb-4">Contact Management</h2>
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <div class="table-responsive card-body">
+                            <h5>Customer Messages</h5>
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Message</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Winslaise Shioso</td>
+                                        <td>winslaise383@gmail.com</td>
+                                        <td>Need help with my order.</td>
+                                        <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#replyMessageModal">Reply</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>John Jonte</td>
+                                        <td>jane.doe@example.com</td>
+                                        <td>Requesting a refund.</td>
+                                        <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#replyMessageModal">Reply</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h5 class="mt-4">Refunds</h5>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addRefundModal">Process Refund</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add Order Modal -->
+    <div class="modal fade" id="addOrderModal" tabindex="-1" aria-labelledby="addOrderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addOrderModalLabel">Add New Order</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addOrderForm">
+                        <div class="mb-3">
+                            <label for="orderCustomer" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="orderCustomer" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderProduct" class="form-label">Product</label>
+                            <input type="text" class="form-control" id="orderProduct" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="orderDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderStatus" class="form-label">Status</label>
+                            <select class="form-select" id="orderStatus" required>
+                                <option value="Pending">Pending</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success">Add Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Order Modal -->
+    <div class="modal fade" id="editOrderModal" tabindex="-1" aria-labelledby="editOrderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editOrderModalLabel">Edit Order</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editOrderForm">
+                        <div class="mb-3">
+                            <label for="editOrderStatus" class="form-label">Status</label>
+                            <select class="form-select" id="editOrderStatus" required>
+                                <option value="Pending">Pending</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addUserForm">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="userName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userJoined" class="form-label">Joined Date</label>
+                            <input type="date" class="form-control" id="userJoined" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Add User</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUserForm">
+                        <div class="mb-3">
+                            <label for="editUserName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="editUserName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editUserEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editUserEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Sale Record Modal -->
+    <div class="modal fade" id="addSaleModal" tabindex="-1" aria-labelledby="addSaleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addSaleModalLabel">Add Sale Record</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addSaleForm">
+                        <div class="mb-3">
+                            <label for="saleDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="saleDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="saleProduct" class="form-label">Product</label>
+                            <input type="text" class="form-control" id="saleProduct" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="saleQuantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="saleQuantity" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="saleRevenue" class="form-label">Revenue (SH.)</label>
+                            <input type="number" class="form-control" id="saleRevenue" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="saleProfitLoss" class="form-label">Profit/Loss (SH.)</label>
+                            <input type="number" class="form-control" id="saleProfitLoss" step="0.01" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Add Sale</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm">
+                        <div class="mb-3">
+                            <label for="editProductName" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="editProductName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editProductPrice" class="form-label">Price (SH.)</label>
+                            <input type="number" class="form-control" id="editProductPrice" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editProductRating" class="form-label">Rating (1-5)</label>
+                            <input type="number" class="form-control" id="editProductRating" step="0.1" min="1" max="5" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editProductImage" class="form-label">Image URL</label>
+                            <input type="url" class="form-control" id="editProductImage" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editProductDetails" class="form-label">Details</label>
+                            <textarea class="form-control" id="editProductDetails" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editProductCategory" class="form-label">Category</label>
+                            <select class="form-select" id="editProductCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="mens_shoes">Men's Shoes</option>
+                                <option value="womens_shoes">Women's Shoes</option>
+                                <option value="kids_shoes">Kids' Shoes</option>
+                                <option value="sports_shoes">Sports Shoes</option>
+                                <option value="casual_shoes">Casual Shoes</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reply Message Modal -->
+    <div class="modal fade" id="replyMessageModal" tabindex="-1" aria-labelledby="replyMessageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="replyMessageModalLabel">Reply to Message</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="replyMessageForm">
+                        <div class="mb-3">
+                            <label for="messageReply" class="form-label">Reply</label>
+                            <textarea class="form-control" id="messageReply" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Reply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Refund Modal -->
+    <div class="modal fade" id="addRefundModal" tabindex="-1" aria-labelledby="addRefundModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addRefundModalLabel">Process Refund</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addRefundForm">
+                        <div class="mb-3">
+                            <label for="refundCustomer" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="refundCustomer" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="refundOrder" class="form-label">Order ID</label>
+                            <input type="text" class="form-control" id="refundOrder" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="refundAmount" class="form-label">Refund Amount (SH.)</label>
+                            <input type="number" class="form-control" id="refundAmount" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="refundReason" class="form-label">Reason</label>
+                            <textarea class="form-control" id="refundReason" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Process Refund</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
